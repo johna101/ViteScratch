@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div id="app"></div>
+
+<environment names="Development">
+    <script type="module">
+          import * as MyLib  from "/dist/src/main.ts";
+          MyLib.registerHiBarChart("#app");
+    </script>
+</environment>
+
+<environment names="Production">
+    <script type="module">
+        MyLib.registerHiBarChart("#app");
+    </script>
+</environment>

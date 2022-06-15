@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>AspNetCoreVueFromScratch</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="my-vue-app\.DS_Store" />
+      <Content Include="my-vue-app\.vscode\extensions.json" />
+      <Content Remove="package.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include="epvs\src\shims.d.ts" />
+      <TypeScriptCompile Include="my-vue-app\vite.config.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="yarn.lock" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\dist\CNAME" />
+      <_ContentIncludedByDefault Remove="wwwroot\dist\element-plus-logo-small.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\dist\favicon.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\dist\manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\dist\style.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\dist\vendor.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\dist\vue-app.es.js" />
+    </ItemGroup>
+
+</Project>

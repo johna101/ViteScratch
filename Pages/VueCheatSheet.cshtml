@@ -1,0 +1,21 @@
+@page
+@model AspNetCoreVueFromScratch.Pages.VueCheatSheet
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Vue Cheatsheet</h1>
+<div id="chart-element"></div>
+</body>
+<script type="module">
+  import {registerHiBarChart} from "/dist/src/main.ts";
+  registerHiBarChart("#chart-element")
+</script>
