@@ -8,13 +8,13 @@
 
 <environment names="Development">
     <script type="module">
-          import * as MyLib  from "/dist/src/main.ts";
-          MyLib.registerHiBarChart("#app");
+          import * as epvslib  from "/dist/epvs/src/main.ts";
+          epvslib.registerHiBarChart("#app");
     </script>
 </environment>
 
 <environment names="Production">
     <script type="module">
-        MyLib.registerHiBarChart("#app");
+        epvslib.registerHiBarChart("#app");
     </script>
 </environment>

@@ -1,10 +1,11 @@
 <template>
   <div style="height:600px">
     <div style="height:100%">
-      <HelloThere msg="A Message"></HelloThere>
-      <Chart style="height:100%" ref="chart"  :options="chartOptions" :updateArgs="[true, false]"></Chart>
+      <el-card>
+        <HelloThere msg="A Message"></HelloThere>
+        <Chart style="height:100%" ref="chart" :options="chartOptions" :updateArgs="[true, false]"></Chart>
+      </el-card>
     </div>
-    <button @click="click">Add</button>
   </div>
 </template>
 
@@ -72,7 +73,7 @@ const chartOptions = reactive({
       x: 0,
       y: -2
     },
-    offset:20
+    offset: 20
   },
   xAxis: {
     labels: {
@@ -83,7 +84,7 @@ const chartOptions = reactive({
         fontSize: '13px',
         fontFamily: 'sans-serif'
       },
-      
+
     },
     categories: [
       "Pass",
@@ -108,6 +109,7 @@ const chartOptions = reactive({
 #highcharts-container {
   height: 100%;
 }
+
 #chart {
   height: 600px;
 }

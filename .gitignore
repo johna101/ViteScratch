@@ -8,3 +8,5 @@ obj/
 epvs/node_modules/
 
 my-vue-app/node_modules/
+
+wwwroot/dist/epvs/

@@ -19,7 +19,7 @@ const pathSrc = path.resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/dist/',
+  base: '/dist/epvs/',
   server: {
     strictPort: true,
     hmr: {
@@ -28,10 +28,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // entry: path.resolve(__dirname, 'lib/main.js'),
       entry: path.resolve(__dirname, 'src/main.ts'),
-      name: 'MyLib',
-      fileName: (format) => `my-lib.${format}.js`
+      name: 'epvslib',
+      fileName: (format) => `epvs-lib.${format}.js`
     },
     rollupOptions: {
       input: {
@@ -42,7 +41,7 @@ export default defineConfig({
         exports: "named",
       }
     },
-    outDir: '../wwwroot/dist',
+    outDir: '../wwwroot/dist/epvs',
     emptyOutDir: true,
     manifest: true,
   },

@@ -1,7 +1,0 @@
-{
-  "src/main.ts": {
-    "file": "my-lib.umd.js",
-    "src": "src/main.ts",
-    "isEntry": true
-  }
-}
