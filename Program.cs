@@ -17,12 +17,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(Environment.CurrentDirectory, "node_modules")),
-    RequestPath = "/StaticFiles"
-});
+
+app.UseStaticFiles();
 
 app.UseRouting();
 

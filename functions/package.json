@@ -1,7 +1,7 @@
 {
   "name": "functions",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "files": [
     "dist"
   ],
@@ -9,8 +9,8 @@
   "module": "./dist/functions-lib.es.js",
   "exports": {
     ".": {
-      "import": "./dist/functions-lib.es.js",
-      "require": "./dist/functions-lib.umd.js"
+      "require": "./dist/functions-lib.umd.js",
+      "import": "./dist/functions-lib.es.js"
     }
   },
   "types": "./dist/types/main.d.ts",
@@ -19,7 +19,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "packit": "yarn pack && mv *.tgz ../mnwt-packages" 
+    "packit": "yarn pack && mv *.tgz ~/macwest/packages/npm" 
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.3",

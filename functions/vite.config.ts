@@ -9,7 +9,13 @@ console.log('pathSrc: ', pathSrc)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/dist/functions/',
+  base: '/dist/',
+  server: {
+    strictPort: true,
+    hmr: {
+      protocol: 'ws'
+    }
+  },
   plugins: [dts()],
   build: {
     watch: {
@@ -19,7 +25,12 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
       name: 'FunctionsLib',
-      fileName: (format) => `functions-lib.${format}.js`
+      fileName: (format) => `functions-lib.${format}.js`,
+    },
+    rollupOptions: {
+      // make sure to externalize deps that shouldn't be bundled
+      // into your library
+      external: [],
     },
     // outDir: '../wwwroot/dist/functions',
     emptyOutDir: true,
