@@ -27,19 +27,14 @@ export default defineConfig({
     }
   },
   build: {
+    watch: {
+      buildDelay: 10,
+      clearScreen: true
+    },
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
       name: 'epvslib',
       fileName: (format) => `epvs-lib.${format}.js`
-    },
-    rollupOptions: {
-      input: {
-        'main': path.resolve(__dirname, 'src/main.ts'),
-      },
-      output: {
-        format: "esm",
-        exports: "named",
-      }
     },
     outDir: '../wwwroot/dist/epvs',
     emptyOutDir: true,
@@ -59,6 +54,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    splitVendorChunkPlugin(),
     Components({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],

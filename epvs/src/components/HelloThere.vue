@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { add } from "functions";
 
 defineProps<{ msg: string }>();
 

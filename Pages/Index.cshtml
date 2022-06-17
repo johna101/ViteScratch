@@ -5,11 +5,15 @@
 }
 
 <div id="app"></div>
-
+@* <script type="module" asp-src-include="~/StaticFiles/functions/dist/functions-lib.es.js"></script> *@
 <environment names="Development">
     <script type="module">
-          import * as epvslib  from "/dist/epvs/src/main.ts";
-          epvslib.registerHiBarChart("#app");
+          import {registerHiBarChart}  from "/dist/epvs/src/main.ts";
+          import * as functionsLib from "/StaticFiles/functions/dist/functions-lib.es.js"          
+          const added = functionsLib.add(1,3) 
+          // console.log('added: ', added)
+          
+          registerHiBarChart("#app");
     </script>
 </environment>
 

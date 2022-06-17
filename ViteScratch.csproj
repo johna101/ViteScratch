@@ -15,6 +15,7 @@
 
     <ItemGroup>
       <TypeScriptCompile Include="epvs\src\shims.d.ts" />
+      <TypeScriptCompile Include="functions\src\dates.ts" />
       <TypeScriptCompile Include="my-vue-app\vite.config.ts" />
     </ItemGroup>
 
@@ -34,6 +35,10 @@
       <_ContentIncludedByDefault Remove="wwwroot\dist\style.css" />
       <_ContentIncludedByDefault Remove="wwwroot\dist\vendor.js" />
       <_ContentIncludedByDefault Remove="wwwroot\dist\vue-app.es.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="mnwt-packages" />
     </ItemGroup>
 
 </Project>

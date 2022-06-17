@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "element-plus": "^2.2.2",
+    "functions": "../mnwt-packages/functions-v0.0.4.tgz",
     "highcharts": "^10.1.0",
     "highcharts-vue": "^1.4.0",
     "vue": "^3.2.36"

@@ -11,6 +11,15 @@ import 'vite/modulepreload-polyfill';
 
 import "~/styles/index.scss";
 import 'uno.css'
+import {add, CheckDateRange} from 'functions'
+
+const startDate = new Date(2016, 0, 1)
+const endDate = new Date(2018, 0, 1)
+let resultDates = CheckDateRange([ startDate, endDate])
+console.log('resultDates..: ', resultDates)
+
+let result = add(1,2)
+console.log('result....: ', result)
 
 // If you want to use ElMessage, import it.
 import "element-plus/theme-chalk/src/message.scss"

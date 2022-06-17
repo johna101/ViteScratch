@@ -12,3 +12,7 @@ my-vue-app/node_modules/
 wwwroot/dist/epvs/
 
 .idea/.idea.AspNetCoreVueFromScratch/
+
+functions/node_modules/
+
+epvs/yarn-error.log

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,12 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Environment.CurrentDirectory, "node_modules")),
+    RequestPath = "/StaticFiles"
+});
 
 app.UseRouting();
 
@@ -32,9 +38,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSpa(spa =>
     {
-        // spa.Options.SourcePath = "ClientApp";
         spa.Options.SourcePath = "epvs";
-        // spa.Options.SourcePath = "my-vue-app";
         spa.Options.DevServerPort = 3001;
         spa.UseReactDevelopmentServer(npmScript: "start");
     });
